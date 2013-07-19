@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>E-compaign</title>
+		<script src="js/jquery1101min.js"></script>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+    <body>
+    	<div class="MainWrapp">
+            <div class="HeaderWrapp">
+            	<div class="logoAndReg">
+                	<div class="logo"><img src="images/mainlogo.png"></div>
+                    <div class="LoginLinks">
+                        <a href="login.html">Login</a>
+                        <a href="new_accnt.html">Create Account</a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="querts">
+                	<p>"If Congress Won't act soon to protect future generations,I will"
+                    -PRESIDENT BARAKA OBAMA</p>
+                    <div class="clear"></div>
+                </div>
+                <div class="MenuWithSearch">
+                	<div class="Menu">
+                    	<img src="images/menu.png" onClick="showOptions();return false;" id="BshowOptions" />
+                    	<div class="DropDown" id="DropDown">
+                        	<div class="DropMenu">
+                            	<a href="index.html">Home</a>
+                                <a href="candidate.html">Candidate</a>
+                                <a href="news.html">News</a>
+                                <a href="blog.html">Blog</a>
+                                <a href="compaignlocation.html">Campaign Locations</a>
+                                <a href="pictures.html">Pictures</a>
+                                <a href="videos.html">Videos</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header_menubar">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="candidate.html">Candidate</a></li>
+                            <li><a href="news.html">News</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="compaignlocation.html">Campaign Locations</a></li>
+                            <li><a href="pictures.html">Pictures</a></li>
+                            <li><a href="videos.html">Videos</a></li>
+                        </ul>
+                    </div>
+                    <div class="search">
+                        <div class="label">Search</div>
+                        <div class="input_search">
+                            <input type="text" placeholder="Search or browse the web" name="search" />
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                
+                <div class="HeaderContent">
+                	<div class="querts">
+                        <p>"If Congress Won't act soon to protect future generations,I will"</p>
+                        <p class="textCentre">-PRESIDENT BARAKA OBAMA</p>
+                    </div>
+                    <div class="querts">
+                        <p>WILL YOU STAND WITH THE PRESIDENT IN THE FIGHT AGAINST CLIMATE CHANGE</p>
+                        <div class="Inputs">
+                            <input type="text" placeholder="Email" name="email" />
+                            <div class="InputSecond">	
+                                <input type="text" placeholder="Zip" name="zip" class="zipWidth"/>&nbsp;
+                                <input type="button" class="submitBtn" value="I WILL"/>
+                            </div>
+                        </div>
+                    </div>
+                   <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            
+            <div class="ContentWrapp">
+            	<div class="EventsWrapp">
+                	<div class="eventsHead">
+                    	<img src="images/star.png" />&nbsp;<div class="HeadTitle">Events</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="eventContent">
+                    	<div class="Content">
+                        	<div class="contentImage"><img src="images/eventimg1.png" /></div>
+                            <div class="info">We need to fix America's broken immigration system</div>
+                            <div class="date">TODAY 03/08</div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="Content">
+                        	<div class="contentImage"><img src="images/eventimg2.png" /></div>
+                            <div class="info">We need to fix America's broken immigration system</div>
+                            <div class="date">TODAY 03/08</div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="Content">
+                        	<div class="contentImage"><img src="images/eventimg3.png" /></div>
+                            <div class="info">We need to fix America's broken immigration system</div>
+                            <div class="date">TODAY 03/08</div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="Content">
+                        	<div class="contentImage"><img src="images/eventimg3.png" /></div>
+                            <div class="info">We need to fix America's broken immigration system</div>
+                            <div class="date">TODAY 03/08</div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="Content">
+                        	<div class="contentImage"><img src="images/eventimg3.png" /></div>
+                            <div class="info">We need to fix America's broken immigration system</div>
+                            <div class="date">TODAY 03/08</div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="Content borderNone">
+                        	<div class="contentImage"><img src="images/eventimg3.png" /></div>
+                            <div class="info">We need to fix America's broken immigration system</div>
+                            <div class="date">TODAY 03/08</div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="FooterWrapp">
+            	<div class="contentLeft">Copyright 2013 E-Compaign | All Rights Reserved</div>
+                <div class="contentRight">Powered by E-Compaign</div>
+            </div>
+        </div>
+    </body>
+</html>
+
+
+<!--===========================  drop down begin =======================================-->
+<script type="text/javascript">
+$(document).ready(function() {
+	$('.MainWrapp').find('div.DropDown').hide();
+ 	
+});
+function showOptions()
+{
+	$('#DropDown').fadeToggle('fast');
+	if($('#DropDown').css('display')=='block')$(window).bind('click',hideOptions);
+	return false;
+	
+}
+function hideOptions(e)
+{
+	if($(e.target).closest('#DropDown').length<1&&$(e.target).closest('#BshowOptions').length<1)
+	{
+		$('#DropDown').fadeOut('fast');$(window).unbind('click',hideOptions);
+	}
+}
+</script>
+<!--===========================  drop down end =======================================-->
